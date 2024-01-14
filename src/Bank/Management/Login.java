@@ -12,7 +12,7 @@ public class Login extends JFrame {
 //   You can not insert 'set' directly to Jlabel i.e why we coverted'set' into Imageicon(because it is from another JAVA'S Framework)so that we can insert it into Jlabel directly..
         ImageIcon bankPng2=new ImageIcon(set);
         JLabel label=new JLabel(bankPng2);
-        label.setBounds(80,50,70,70);
+        label.setBounds(82,50,70,70);
         add(label);
         setSize(800,500);
         setVisible(true);
