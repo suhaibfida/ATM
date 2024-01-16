@@ -1,10 +1,14 @@
 package Bank.Management;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Login extends JFrame {
-
+public class Login extends JFrame implements ActionListener {
+    JButton logIn,clear,signUp;
+    JTextField text1;
+    JPasswordField text2;
     Login(){
+        getContentPane().setBackground(Color.pink);
         setTitle("ATM");
         setLayout(null);
         ImageIcon bankPng=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
@@ -14,39 +18,79 @@ public class Login extends JFrame {
 //  -we can insert it into Jlabel directly..
         ImageIcon bankPng2=new ImageIcon(set);
         JLabel label=new JLabel(bankPng2);
-        label.setBounds(350,20,70,70);
+        label.setBounds(351,19,80,80);
         add(label);
-        setSize(800,500);
+        setSize(780,520);
         setVisible(true);
         setLocation(350,180);
 //      HeadLine.
-        JLabel headL=new JLabel("Socko |Wall| Bank");
-        headL.setBounds(229,100,450,40);
-        headL.setFont(new Font("Serif",Font.BOLD,38));
+        JLabel headL=new JLabel("Form |Wall| Bank");
+        headL.setBounds(211,100,450,40);
+        headL.setFont(new Font("Serif",Font.BOLD,47));
         add(headL);
 
 //        Card No.
-        JLabel cardNo=new JLabel("Card No.");
+        JLabel cardNo=new JLabel("Card No:");
         cardNo.setBounds(100,200,450,40);
-        cardNo.setFont(new Font("SanSerif",Font.BOLD,33));
+        cardNo.setFont(new Font("Raleway",Font.BOLD,30));
         add(cardNo);
 //        TextField for card
-        JTextField text1=new JTextField();
-        text1.setBounds(250,206,330,30);
+         text1=new JTextField();
+        text1.setBounds(250,208,330,27);
+        text1.setFont(new Font("SanSerif",Font.BOLD,18));
         add(text1);
 
 
 //        Pin
-        JLabel pin=new JLabel("Pin No.");
-        pin.setBounds(100,275,350,40);
-        pin.setFont(new Font("SanSerif",Font.BOLD,33));
+        JLabel pin=new JLabel("Pin No:");
+        pin.setBounds(100,275,400,40);
+        pin.setFont(new Font("Raleway",Font.BOLD,30));
+
         add(pin);
 //        TextField for Pin
-        JTextField text2=new JTextField();
-        text2.setBounds(250,282,330,30);
+        text2=new JPasswordField();
+        text2.setBounds(250,283,330,27);
+        text2.setFont(new Font("serif",Font.BOLD,18));
         add(text2);
-        getContentPane().setBackground(Color.white);
+//        Buttons
+         logIn=new JButton("LogIn");
+        logIn.setBounds(250,350,150,30);
+        logIn.setFont(new Font("SanSerif",Font.BOLD,18));
+        logIn.addActionListener(this);
+        logIn.setBackground(Color.DARK_GRAY);
+        logIn.setForeground(Color.WHITE);
+        add(logIn);
 
+
+         clear=new JButton("Clear");
+        clear.setBounds(430,350,150,30);
+        clear.setFont(new Font("SanSerif",Font.BOLD,18));
+        clear.addActionListener(this);
+        clear.setBackground(Color.DARK_GRAY);
+        clear.setForeground(Color.WHITE);
+        add(clear);
+
+         signUp =new JButton("SignUp");
+        signUp.setBounds(250,390,330,30);
+        signUp.setFont(new Font("SanSerif",Font.BOLD,18));
+        signUp.addActionListener(this);
+        signUp.setBackground(Color.darkGray);
+        signUp.setForeground(Color.WHITE);
+        add(signUp);
+
+
+
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==clear){
+            text1.setText("");
+            text2.setText("");
+
+
+
+        }
 
 
     }
@@ -58,5 +102,8 @@ public class Login extends JFrame {
     public static void main(String[] args) {
         new Login();
     }
+
+
+
 }
 
