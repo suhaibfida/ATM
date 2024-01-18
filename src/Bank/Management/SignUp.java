@@ -51,6 +51,33 @@ public class SignUp extends JFrame{
         dob.setFont(new Font("sanserif",Font.BOLD,20));
         dob.setBounds(70,280,450,40);
         add(dob);
+        JLabel email=new JLabel("E-mail:");
+        email.setFont(new Font("sanserif",Font.BOLD,20));
+        email.setBounds(70,330,450,40);
+        add(email);
+        JLabel marital=new JLabel("Marital Status:");
+        marital.setFont(new Font("sanserif",Font.BOLD,20));
+        marital.setBounds(70,380,450,40);
+        add(marital);
+
+        JLabel state=new JLabel("State:");
+        state.setFont(new Font("sanserif",Font.BOLD,20));
+        state.setBounds(70,430,450,40);
+        add(state);
+        JLabel city=new JLabel("City:");
+        city.setFont(new Font("sanserif",Font.BOLD,20));
+        city.setBounds(70,480,450,40);
+        add(city);
+        JLabel address=new JLabel("Address:");
+        address.setFont(new Font("sanserif",Font.BOLD,20));
+        address.setBounds(70,530,450,40);
+        add(address);
+
+        JLabel pincode=new JLabel("Pincode:");
+        pincode.setFont(new Font("sanserif",Font.BOLD,20));
+        pincode.setBounds(70,580,450,40);
+        add(pincode);
+
 
 
     }
