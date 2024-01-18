@@ -30,10 +30,27 @@ public class SignUp extends JFrame{
         fNo.setBounds(590,7,150,30);
         add(fNo);
 //        Personal Details
-        JLabel pDetails=new JLabel("Personal Details");
+        JLabel pDetails=new JLabel("Personal Details:-");
         pDetails.setFont(new Font("sanserif",Font.BOLD,30));
-        pDetails.setBounds(212,80,450,40);
+        pDetails.setBounds(60,80,450,40);
         add(pDetails);
+
+        JLabel name=new JLabel("Name:");
+        name.setFont(new Font("sanserif",Font.BOLD,20));
+        name.setBounds(70,130,450,40);
+        add(name);
+        JLabel fname=new JLabel("Fathers Name:");
+        fname.setFont(new Font("sanserif",Font.BOLD,20));
+        fname.setBounds(70,180,450,40);
+        add(fname);
+        JLabel mname=new JLabel("Mothers Name:");
+        mname.setFont(new Font("sanserif",Font.BOLD,20));
+        mname.setBounds(70,230,450,40);
+        add(mname);
+        JLabel dob=new JLabel("DOB:");
+        dob.setFont(new Font("sanserif",Font.BOLD,20));
+        dob.setBounds(70,280,450,40);
+        add(dob);
 
 
     }
