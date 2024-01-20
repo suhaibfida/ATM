@@ -4,6 +4,7 @@
 
   An ATM Management System is like a smart machine that helps people do money stuff at banks without needing to
   talk to a person. You can take out cash or check how much money you have, and you don't need a person like a cashier to help you. It's all done electronically.
+  <hr>
  
 <h3>⚙️Technologies Used:-</h3>
   
