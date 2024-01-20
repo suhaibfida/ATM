@@ -6,7 +6,7 @@
   talk to a person. You can take out cash or check how much money you have, and you don't need a person like a 
   cashier to help you. It's all done electronically.
  
-<h3>Technologies Used:-<h3/>
+<h3>Technologies Used:-</h3>
   
  1) JAVA (Language).
  2) OOPS (Object Oriented Programming (Concepts in Java)).
