@@ -39,8 +39,6 @@ public class Login extends JFrame implements ActionListener {
         text1.setBounds(250,208,330,27);
         text1.setFont(new Font("SanSerif",Font.BOLD,18));
         add(text1);
-
-
 //        Pin
         JLabel pin=new JLabel("Pin No:");
         pin.setBounds(100,275,400,40);
@@ -53,6 +51,7 @@ public class Login extends JFrame implements ActionListener {
         text2.setFont(new Font("serif",Font.BOLD,18));
         add(text2);
 //        Buttons
+//        LOGIN
          logIn=new JButton("LogIn");
         logIn.setBounds(250,350,150,30);
         logIn.setFont(new Font("SanSerif",Font.BOLD,18));
@@ -60,8 +59,7 @@ public class Login extends JFrame implements ActionListener {
         logIn.setBackground(Color.DARK_GRAY);
         logIn.setForeground(Color.WHITE);
         add(logIn);
-
-
+//        CLEAR
          clear=new JButton("Clear");
         clear.setBounds(430,350,150,30);
         clear.setFont(new Font("SanSerif",Font.BOLD,18));
@@ -69,41 +67,24 @@ public class Login extends JFrame implements ActionListener {
         clear.setBackground(Color.DARK_GRAY);
         clear.setForeground(Color.WHITE);
         add(clear);
-
-         signUp =new JButton("SignUp");
+//        SIGNUP
+        signUp =new JButton("SignUp");
         signUp.setBounds(250,390,330,30);
         signUp.setFont(new Font("SanSerif",Font.BOLD,18));
         signUp.addActionListener(this);
         signUp.setBackground(Color.darkGray);
         signUp.setForeground(Color.WHITE);
         add(signUp);
-
-
-
-
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==clear){
             text1.setText("");
             text2.setText("");
-
-
-
         }
-
-
     }
-
-
-
-
-
     public static void main(String[] args) {
         new Login();
     }
-
-
-
 }
 
