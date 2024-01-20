@@ -15,4 +15,4 @@
 
 Tools:
 
-1) JCalendar:  "https://toedter.com/jcalendar/" [Library] -->-->unzip -->bin --> jcalendar.
+1) JCalendar:  "https://toedter.com/jcalendar/" [Library] (Unzip -->bin --> Jcalendar).
