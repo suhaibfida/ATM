@@ -71,7 +71,7 @@ public class SignUp extends JFrame{
         dob.setBounds(70,280,450,40);
         add(dob);
 //        -------------------------------------------------------------------------------------------
-//       JCALENDAR in src File  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
+//       JCALENDAR site:"https://toedter.com/jcalendar/"-->unzip -->bin --> jcalendar  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
         JDateChooser date=new JDateChooser();
         date.setBounds(250,288,250,25);
         date.setForeground(Color.BLACK);
