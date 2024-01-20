@@ -7,6 +7,7 @@
   cashier to help you. It's all done electronically.
  
 <h2> ⚙️Technologies Used:-<h2/>
+  
  1) JAVA (Language).
  2) OOPS (Object Oriented Programming (Concepts in Java)).
  3) AWT (Java FrameWork).
