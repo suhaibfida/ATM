@@ -19,4 +19,5 @@
 <h3>🔍Tools:-</h3>
 
 1) JCalendar:  "https://toedter.com/jcalendar/" [Library] (Unzip -->bin --> Jcalendar).
-2) Jdbc (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/"--> platform independent -->[Library] {Unzip-->MySQL connector}.
+2) Jdbc (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/" --> platform independent -->[Library]
+   {Unzip-->MySQL connector}.
