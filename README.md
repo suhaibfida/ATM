@@ -17,7 +17,7 @@
   <hr>
 
 <h3>🔍Tools:-</h3>
-1)  IntelliJ IDEA.
+  1)  IntelliJ IDEA.
 
 2)  JCalendar [Library]:  "https://toedter.com/jcalendar/" --> Unzip -->bin --> Jcalendar --> IntelliJ IDEA --> Module settings -->Library -->Add.
 
