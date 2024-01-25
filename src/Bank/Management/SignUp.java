@@ -1,10 +1,16 @@
 package Bank.Management;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 import com.toedter.calendar.JDateChooser;
 
-public class SignUp extends JFrame{
+public class SignUp extends JFrame implements ActionListener{
+    Random random;
+    JTextField text1,text2,text3,text11,text12,text13,text14;
+    JLabel name,fNo,dob,gender,marital,fname,mname;
+    JRadioButton male,female,married,unmarried,others;
     SignUp(){
 //        BACKGROUND COLOR
         getContentPane().setBackground(Color.pink);
@@ -27,10 +33,10 @@ public class SignUp extends JFrame{
         bName.setBounds(50,12,130,30);
         add(bName);
 //        Form No
-        Random random=new Random();
+         random=new Random();
         long rNo=Math.abs((random.nextLong()%9000L)+1000L);
         System.out.println(rNo);
-        JLabel fNo=new JLabel("Form No:- "+rNo);
+        fNo=new JLabel("Form No:- "+rNo);
         fNo.setBounds(590,7,150,40);
         fNo.setFont(new Font("sanserif",Font.BOLD,15));
         add(fNo);
@@ -41,32 +47,32 @@ public class SignUp extends JFrame{
         pDetails.setBounds(60,70,450,40);
         add(pDetails);
 //       STARTING FROM NAME:
-        JLabel name=new JLabel("Name:");
+        name=new JLabel("Name:");
         name.setFont(new Font("sanserif",Font.BOLD,20));
         name.setBounds(70,130,450,40);
         add(name);
-        JTextField text1=new JTextField();
+        text1=new JTextField();
         text1.setBounds(250,137,250,25);
         text1.setFont(new Font("SanSerif",Font.BOLD,18));
         add(text1);
-        JLabel fname=new JLabel("Fathers Name:");
+        fname=new JLabel("Fathers Name:");
         fname.setFont(new Font("sanserif",Font.BOLD,20));
         fname.setBounds(70,180,450,40);
         add(fname);
-        JTextField text2=new JTextField();
+        text2=new JTextField();
         text2.setBounds(250,188,250,25);
         text2.setFont(new Font("SanSerif",Font.BOLD,18));
         add(text2);
-        JLabel mname=new JLabel("Mothers Name:");
+        mname=new JLabel("Mothers Name:");
         mname.setFont(new Font("sanserif",Font.BOLD,20));
         mname.setBounds(70,230,450,40);
         add(mname);
-        JTextField text3=new JTextField();
+        text3=new JTextField();
         text3.setBounds(250,238,250,25);
         text3.setFont(new Font("SanSerif",Font.BOLD,13));
         add(text3);
 //
-        JLabel dob=new JLabel("DOB:");
+        dob=new JLabel("DOB:");
         dob.setFont(new Font("sanserif",Font.BOLD,20));
         dob.setBounds(70,280,450,40);
         add(dob);
@@ -76,16 +82,16 @@ public class SignUp extends JFrame{
         date.setBounds(250,288,250,25);
         date.setForeground(Color.BLACK);
         add(date);
-        JLabel email=new JLabel("Gender:");
-        email.setFont(new Font("sanserif",Font.BOLD,20));
-        email.setBounds(70,330,450,40);
-        add(email);
+        gender=new JLabel("Gender:");
+        gender.setFont(new Font("sanserif",Font.BOLD,20));
+        gender.setBounds(70,330,450,40);
+        add(gender);
 //        -------------------------------------New Ideas------------------------------------------------
-        JRadioButton male=new JRadioButton("Male");
+        male=new JRadioButton("Male");
         male.setBounds(250,338,100,25);
         male.setBackground(Color.white);
         add(male);
-        JRadioButton female=new JRadioButton("Female");
+        female=new JRadioButton("Female");
         female.setBounds(400,338,100,25);
         female.setBackground(Color.white);
         add(female);
@@ -93,19 +99,19 @@ public class SignUp extends JFrame{
         button1.add(male);
         button1.add(female);
 
-        JLabel marital=new JLabel("Marital Status:");
+        marital=new JLabel("Marital Status:");
         marital.setFont(new Font("sanserif",Font.BOLD,20));
         marital.setBounds(70,380,450,40);
         add(marital);
-        JRadioButton married=new JRadioButton ("Married");
+        married=new JRadioButton ("Married");
         married.setBounds(250,388,70,25);
         married.setBackground(Color.white);
         add(married);
-        JRadioButton unmarried=new JRadioButton ("Unmarried");
+        unmarried=new JRadioButton ("Unmarried");
         unmarried.setBounds(327,388,85,25);
         unmarried.setBackground(Color.white);
         add(unmarried);
-        JRadioButton others=new JRadioButton ("Others");
+        others=new JRadioButton ("Others");
         others.setBounds(419,388,81,25);
         others.setBackground(Color.white);
         add(others);
@@ -120,37 +126,37 @@ public class SignUp extends JFrame{
         state.setFont(new Font("sanserif",Font.BOLD,20));
         state.setBounds(70,430,450,40);
         add(state);
-        JTextField text7=new JTextField();
-        text7.setBounds(250,438,250,25);
-        text7.setFont(new Font("SanSerif",Font.BOLD,18));
-        add(text7);
+        text11=new JTextField();
+        text11.setBounds(250,438,250,25);
+        text11.setFont(new Font("SanSerif",Font.BOLD,18));
+        add(text11);
 
         JLabel city=new JLabel("City:");
         city.setFont(new Font("sanserif",Font.BOLD,20));
         city.setBounds(70,480,450,40);
         add(city);
-        JTextField text8=new JTextField();
-        text8.setBounds(250,488,250,25);
-        text8.setFont(new Font("SanSerif",Font.BOLD,18));
-        add(text8);
+        text12=new JTextField();
+        text12.setBounds(250,488,250,25);
+        text12.setFont(new Font("SanSerif",Font.BOLD,18));
+        add(text12);
 
         JLabel address=new JLabel("Address:");
         address.setFont(new Font("sanserif",Font.BOLD,20));
         address.setBounds(70,530,450,40);
         add(address);
-        JTextField text9=new JTextField();
-        text9.setBounds(250,538,250,25);
-        text9.setFont(new Font("SanSerif",Font.BOLD,18));
-        add(text9);
+        text13=new JTextField();
+        text13.setBounds(250,538,250,25);
+        text13.setFont(new Font("SanSerif",Font.BOLD,18));
+        add(text13);
 
         JLabel pincode=new JLabel("Pincode:");
         pincode.setFont(new Font("sanserif",Font.BOLD,20));
         pincode.setBounds(70,580,450,40);
         add(pincode);
-        JTextField text10=new JTextField();
-        text10.setBounds(250,588,250,25);
-        text10.setFont(new Font("SanSerif",Font.BOLD,18));
-        add(text10);
+        text14=new JTextField();
+        text14.setBounds(250,588,250,25);
+        text14.setFont(new Font("SanSerif",Font.BOLD,18));
+        add(text14);
 //        Buttons
 
         JButton next=new JButton("Next");
@@ -163,5 +169,11 @@ public class SignUp extends JFrame{
 
     public static void main(String[] args) {
         new SignUp();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String random=""+fNo;
+
     }
 }
