@@ -1,6 +1,6 @@
 # 🏧ATM (Automated Teller Machine)
 
-<h4>🧑‍💼ATM Management System (Beginner Friendly).</h4>
+<h3>🧑‍💼ATM Management System (Beginner Friendly).</h3>
 
   An ATM Management System is like a smart machine that helps people do money stuff at banks without needing to
   talk to a person. You can take out cash or check how much money you have, and you don't need a person like a cashier to help you. It's all done 
@@ -18,4 +18,7 @@
 
 <h3>🔍Tools:-</h3>
 
-1) JCalendar:  "https://toedter.com/jcalendar/" [Library] (Unzip -->bin --> Jcalendar).
+1) IntelliJ IDEA.
+2) JCalendar [Library]:  "https://toedter.com/jcalendar/" --> Unzip -->bin --> Jcalendar --> IntelliJ IDEA --> Module settings-->Library-->Add.
+3) Jdbc [Library] (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/" --> platform independent
+   {Unzip-->MySQL connector}.
