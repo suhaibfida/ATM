@@ -76,6 +76,7 @@ public class Login extends JFrame implements ActionListener {
         signUp.setForeground(Color.WHITE);
         add(signUp);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==clear){

@@ -3,11 +3,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
+import java.util.*;
 import com.toedter.calendar.JDateChooser;
 
 public class SignUp extends JFrame implements ActionListener{
-    Random random;
+    long rNo;
+    JDateChooser date;
     JTextField text1,text2,text3,text11,text12,text13,text14;
     JLabel name,fNo,dob,gender,marital,fname,mname;
     JRadioButton male,female,married,unmarried,others;
@@ -33,7 +34,7 @@ public class SignUp extends JFrame implements ActionListener{
         bName.setBounds(50,12,130,30);
         add(bName);
 //        Form No
-         random=new Random();
+         Random random=new Random();
         long rNo=Math.abs((random.nextLong()%9000L)+1000L);
         System.out.println(rNo);
         fNo=new JLabel("Form No:- "+rNo);
@@ -78,7 +79,7 @@ public class SignUp extends JFrame implements ActionListener{
         add(dob);
 //        -------------------------------------------------------------------------------------------
 //       JCALENDAR site:"https://toedter.com/jcalendar/"-->unzip -->bin --> jcalendar  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
-        JDateChooser date=new JDateChooser();
+         date=new JDateChooser();
         date.setBounds(250,288,250,25);
         date.setForeground(Color.BLACK);
         add(date);
@@ -173,7 +174,37 @@ public class SignUp extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String random=""+fNo;
+        String random=""+rNo;
+        String name=text1.getText();
+        String fName=text2.getText();
+        String mName=text3.getText();
+        String dob=((JTextField)date.getDateEditor().getUiComponent()).getText();
+        String gender=null;
+        if(male.isSelected()){
+            gender="Male";
+        }
+        else if(female.isSelected()){
+            gender="Female";
+        }
+        String marital=null;
+        if(married.isSelected()){
+            marital="Married";
+
+
+        }
+        else if(unmarried.isSelected()){
+            marital="Unmarried";
+
+        }
+        else{
+            marital="Others";
+        }
+        String state=text11.getText();
+        String city =text12.getText();
+        String address=text13.getText();
+        String pinc=text14.getText();
+
+
 
     }
 }
