@@ -165,6 +165,7 @@ public class SignUp extends JFrame implements ActionListener{
         next.setFont(new Font("SanSerif",Font.BOLD,18));
         next.setBackground(Color.DARK_GRAY);
         next.setForeground(Color.WHITE);
+        next.addActionListener(this);
         add(next);
     }
 
@@ -203,6 +204,15 @@ public class SignUp extends JFrame implements ActionListener{
         String city =text12.getText();
         String address=text13.getText();
         String pinc=text14.getText();
+        try{
+            if(name.equals("")){
+                JOptionPane.showMessageDialog(null,"Invalid Name");
+            }
+
+        }
+        catch (Exception f){
+            System.out.println(f);
+        }
 
 
 
