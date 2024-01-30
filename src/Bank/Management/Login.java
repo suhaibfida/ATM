@@ -20,9 +20,9 @@ public class Login extends JFrame implements ActionListener {
         JLabel label=new JLabel(bankPng2);
         label.setBounds(351,19,80,80);
         add(label);
-        setSize(780,520);
+        setSize(780,620);
         setVisible(true);
-        setLocation(350,180);
+        setLocation(350,150);
 //      HeadLine.
         JLabel headL=new JLabel("Form |Wall| Bank");
         headL.setBounds(211,100,450,40);
@@ -82,6 +82,11 @@ public class Login extends JFrame implements ActionListener {
         if(e.getSource()==clear){
             text1.setText("");
             text2.setText("");
+        }
+        else if (e.getSource()==signUp) {
+
+             setVisible(false);
+             new SignUp().setVisible(true);
         }
     }
     public static void main(String[] args) {

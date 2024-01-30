@@ -36,7 +36,6 @@ public class SignUp extends JFrame implements ActionListener{
 //        Form No
          Random random=new Random();
         long rNo=Math.abs((random.nextLong()%9000L)+1000L);
-        System.out.println(rNo);
         fNo=new JLabel("Form No:- "+rNo);
         fNo.setBounds(590,7,150,40);
         fNo.setFont(new Font("sanserif",Font.BOLD,15));
@@ -81,7 +80,8 @@ public class SignUp extends JFrame implements ActionListener{
 //       JCALENDAR site:"https://toedter.com/jcalendar/"-->unzip -->bin --> jcalendar  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
          date=new JDateChooser();
         date.setBounds(250,288,250,25);
-        date.setForeground(Color.BLACK);
+        date.setFont(new Font("sanserif",Font.BOLD,10));
+        date.setForeground(Color.black);
         add(date);
         gender=new JLabel("Gender:");
         gender.setFont(new Font("sanserif",Font.BOLD,20));
@@ -207,6 +207,11 @@ public class SignUp extends JFrame implements ActionListener{
         try{
             if(name.equals("")){
                 JOptionPane.showMessageDialog(null,"Invalid Name");
+            }
+            else {
+               Connect c=new Connect();
+               String insertVal="insert  into signUp values('"+random+"','"+name+"','"+fName+"','"+mName+"','"+dob+"','"+gender+"','"+marital+"','"+state+"','"+city+"','"+address+"','"+pinc+"')";
+                c.s.executeUpdate(insertVal);
             }
 
         }
