@@ -5,8 +5,8 @@ import java.awt.*;
 
 public class SignUp2 extends JFrame {
 
-    JTextField text1,text2,text3;
-    JLabel income, edQual, existAcc,marital, pNo, adNo;
+    JTextField text4,text2,text3;
+    JLabel income, edQual, existAcc, pNo, adNo,occu;
     JRadioButton male,female,married,unmarried,others;
     SignUp2(){
 //        BACKGROUND COLOR
@@ -14,7 +14,7 @@ public class SignUp2 extends JFrame {
 //        FRAME
         setLayout(null);
         setTitle("Page No.2");
-        setSize(750,770);
+        setSize(720,770);
         setVisible(true);
         setLocation(410,30);
 //        HEAD IMG
@@ -41,9 +41,9 @@ public class SignUp2 extends JFrame {
         income.setFont(new Font("sanserif",Font.BOLD,20));
         income.setBounds(70,130,450,40);
         add(income);
-        String[] inco ={"null","<150000","<250000","<350000","<500000"};
+        String[] inco ={"Nothing","<1,50,000","<2,50,000","<3,50,000","<=5,00,000"};
         JComboBox inc=new JComboBox(inco);
-        inc.setBounds(250,137,250,25);
+        inc.setBounds(250,137,250,27);
         inc.setFont(new Font("SanSerif",Font.BOLD,18));
         add(inc);
         pNo =new JLabel("PAN Number:");
@@ -67,6 +67,12 @@ public class SignUp2 extends JFrame {
         edQual.setFont(new Font("sanserif",Font.BOLD,20));
         edQual.setBounds(70,280,450,40);
         add(edQual);
+
+        String[] edu ={"Nothing","HighSchool","College","Some College","Graduate","Masters"};
+        JComboBox educ=new JComboBox(edu);
+        educ.setBounds(250,287,250,27);
+        educ.setFont(new Font("SanSerif",Font.BOLD,18));
+        add(educ);
 //        -------------------------------------------------------------------------------------------
 //       JCALENDAR site:"https://toedter.com/jcalendar/"-->unzip -->bin --> jcalendar  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
 
@@ -74,6 +80,23 @@ public class SignUp2 extends JFrame {
         existAcc.setFont(new Font("sanserif",Font.BOLD,20));
         existAcc.setBounds(70,330,450,40);
         add(existAcc);
+        text4=new JTextField();
+        text4.setBounds(250,337,250,25);
+        text4.setFont(new Font("SanSerif",Font.BOLD,13));
+        add(text4);
+
+
+
+        occu=new JLabel("Occupation:");
+        occu.setFont(new Font("sanserif",Font.BOLD,20));
+        occu.setBounds(70,380,450,40);
+        add(occu);
+        String [] occupation={"Employed","Self-Employed","Bussiness","Retired","Freelancing","Others"};
+        JComboBox occup=new JComboBox(occupation);
+        occup.setFont(new Font("sanserif",Font.BOLD,20));
+        occup.setBounds(250,387,250,28);
+        add(occup);
+
 
 //        ------------------------------------------------------------------------------------
 
@@ -81,7 +104,7 @@ public class SignUp2 extends JFrame {
 //        Buttons
 
         JButton next=new JButton("Next");
-        next.setBounds(300,650,150,30);
+        next.setBounds(290,550,150,30);
         next.setFont(new Font("SanSerif",Font.BOLD,18));
         next.setBackground(Color.DARK_GRAY);
         next.setForeground(Color.WHITE);
