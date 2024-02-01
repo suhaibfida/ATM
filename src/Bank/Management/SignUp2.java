@@ -1,14 +1,20 @@
 package Bank.Management;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.sql.SQLException;
 
 
-public class SignUp2 extends JFrame {
+public class SignUp2 extends JFrame implements ActionListener {
 
     JTextField text4,text2,text3;
-    JLabel income, edQual, existAcc, pNo, adNo,occu;
-    JRadioButton male,female,married,unmarried,others;
-    SignUp2(){
+    JLabel income,edQual,existAcc,pNo,adNo,occu;
+    JComboBox inc,educ,occup;
+    JButton next;
+    String formno;
+    SignUp2(String random){
+        this.formno=random;
 //        BACKGROUND COLOR
         getContentPane().setBackground(Color.pink);
 //        FRAME
@@ -42,7 +48,7 @@ public class SignUp2 extends JFrame {
         income.setBounds(70,130,450,40);
         add(income);
         String[] inco ={"Nothing","<1,50,000","<2,50,000","<3,50,000","<=5,00,000"};
-        JComboBox inc=new JComboBox(inco);
+        inc=new JComboBox(inco);
         inc.setBounds(250,137,250,27);
         inc.setFont(new Font("SanSerif",Font.BOLD,18));
         add(inc);
@@ -69,7 +75,7 @@ public class SignUp2 extends JFrame {
         add(edQual);
 
         String[] edu ={"Nothing","HighSchool","College","Some College","Graduate","Masters"};
-        JComboBox educ=new JComboBox(edu);
+         educ=new JComboBox(edu);
         educ.setBounds(250,287,250,27);
         educ.setFont(new Font("SanSerif",Font.BOLD,18));
         add(educ);
@@ -92,27 +98,60 @@ public class SignUp2 extends JFrame {
         occu.setBounds(70,380,450,40);
         add(occu);
         String [] occupation={"Employed","Self-Employed","Bussiness","Retired","Freelancing","Others"};
-        JComboBox occup=new JComboBox(occupation);
+        occup=new JComboBox(occupation);
         occup.setFont(new Font("sanserif",Font.BOLD,20));
         occup.setBounds(250,387,250,28);
         add(occup);
-
-
-//        ------------------------------------------------------------------------------------
-
-
-//        Buttons
-
-        JButton next=new JButton("Next");
+         next=new JButton("Next");
         next.setBounds(290,550,150,30);
         next.setFont(new Font("SanSerif",Font.BOLD,18));
         next.setBackground(Color.DARK_GRAY);
         next.setForeground(Color.WHITE);
+        next.addActionListener(this);
         add(next);
-    }
+
+        }
+
+
+//        ------------------------------------------------------------------------------------
+//        Buttons
+
+
+
 
     public static void main(String[] args) {
-        new SignUp2();
+        new SignUp2("");
+
     }
 
-}
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        String stinc = (String) inc.getSelectedItem();
+        String txt2=  text2.getText();
+        String txt3= text3.getText();
+        String educ1= (String) educ.getSelectedItem();
+        String existAcc=text4.getText();
+        String occupa= (String) occup.getSelectedItem();
+        try {
+            if (stinc.equals("nothing")) {
+                JOptionPane.showMessageDialog(null, "Invalid Income");
+            } else if (e.getSource()==next){
+                Connect c = new Connect();
+                String insertVal = "insert into signUp2 values('" + formno + "','" + stinc + "','" + txt2 + "','" + txt3 + "','" + educ1 + "','" + existAcc + "','" + occupa + "')";
+                c.s.executeUpdate(insertVal);
+            }
+
+
+        } catch (SQLException ex) {
+            System.out.println(ex);;
+        }
+
+    }
+
+    }
+
+
+
+

@@ -12,7 +12,8 @@ public class SignUp extends JFrame implements ActionListener{
     JTextField text1,text2,text3,text11,text12,text13,text14;
     JLabel name,fNo,dob,gender,marital,fname,mname;
     JRadioButton male,female,married,unmarried,others;
-    SignUp(){
+    JButton next;
+    SignUp(String formno){
 //        BACKGROUND COLOR
         getContentPane().setBackground(Color.pink);
 //        FRAME
@@ -35,7 +36,7 @@ public class SignUp extends JFrame implements ActionListener{
         add(bName);
 //        Form No
          Random random=new Random();
-        long rNo=Math.abs((random.nextLong()%9000L)+1000L);
+         rNo=Math.abs((random.nextLong()%9000L)+1000L);
         fNo=new JLabel("Form No:- "+rNo);
         fNo.setBounds(590,7,150,40);
         fNo.setFont(new Font("sanserif",Font.BOLD,15));
@@ -160,7 +161,7 @@ public class SignUp extends JFrame implements ActionListener{
         add(text14);
 //        Buttons
 
-        JButton next=new JButton("Next");
+        next=new JButton("Next");
         next.setBounds(300,650,150,30);
         next.setFont(new Font("SanSerif",Font.BOLD,18));
         next.setBackground(Color.DARK_GRAY);
@@ -170,7 +171,7 @@ public class SignUp extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new SignUp();
+        new SignUp("");
     }
 
     @Override
@@ -187,7 +188,7 @@ public class SignUp extends JFrame implements ActionListener{
         else if(female.isSelected()){
             gender="Female";
         }
-        String marital=null;
+        String marital;
         if(married.isSelected()){
             marital="Married";
 
@@ -208,10 +209,13 @@ public class SignUp extends JFrame implements ActionListener{
             if(name.equals("")){
                 JOptionPane.showMessageDialog(null,"Invalid Name");
             }
-            else {
+            else if (e.getSource()==next){
+
                Connect c=new Connect();
                String insertVal="insert  into signUp values('"+random+"','"+name+"','"+fName+"','"+mName+"','"+dob+"','"+gender+"','"+marital+"','"+state+"','"+city+"','"+address+"','"+pinc+"')";
                 c.s.executeUpdate(insertVal);
+                setVisible(false);
+                new SignUp2(random).setVisible(true);
             }
 
         }
