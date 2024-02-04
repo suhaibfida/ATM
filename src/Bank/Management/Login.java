@@ -10,6 +10,9 @@ public class Login extends JFrame implements ActionListener {
     Login(){
         getContentPane().setBackground(Color.pink);
         setTitle("ATM");
+        setSize(780,620);
+        setVisible(true);
+        setLocation(350,150);
         setLayout(null);
         ImageIcon bankPng=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
         Image set=bankPng.getImage().getScaledInstance(70,70,Image.SCALE_DEFAULT);
@@ -20,9 +23,7 @@ public class Login extends JFrame implements ActionListener {
         JLabel label=new JLabel(bankPng2);
         label.setBounds(351,19,80,80);
         add(label);
-        setSize(780,620);
-        setVisible(true);
-        setLocation(350,150);
+
 //      HeadLine.
         JLabel headL=new JLabel("Form |Wall| Bank");
         headL.setBounds(211,100,450,40);

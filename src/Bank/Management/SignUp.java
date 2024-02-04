@@ -13,7 +13,7 @@ public class SignUp extends JFrame implements ActionListener{
     JLabel name,fNo,dob,gender,marital,fname,mname;
     JRadioButton male,female,married,unmarried,others;
     JButton next;
-    SignUp(String formno){
+    SignUp( ){
 //        BACKGROUND COLOR
         getContentPane().setBackground(Color.pink);
 //        FRAME
@@ -171,7 +171,7 @@ public class SignUp extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new SignUp("");
+        new SignUp();
     }
 
     @Override
