@@ -2,8 +2,9 @@ package Bank.Management;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
-public class SignUp3 extends JFrame {
+public class SignUp3 extends JFrame implements ActionListener{
     JRadioButton b1,b2,b3;
     JCheckBox c1,c2,c3,c4,c5;
     JButton submit,cancel;
@@ -76,6 +77,7 @@ public class SignUp3 extends JFrame {
         submit.setFont(new Font("SanSerif",Font.BOLD,18));
         submit.setBackground(Color.darkGray);
         submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
         add(submit);
 
         cancel=new JButton("Cancel");
@@ -83,6 +85,7 @@ public class SignUp3 extends JFrame {
         cancel.setFont(new Font("SanSerif",Font.BOLD,18));
         cancel.setBackground(Color.darkGray);
         cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
         add(cancel);
 
 
@@ -95,5 +98,55 @@ public class SignUp3 extends JFrame {
 
     public static void main(String[] args) {
         new  SignUp3();
+
     }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+      if(e.getSource()==submit){
+      String type=null;
+
+      if(b1.isSelected()){
+        type="Savings Account";
+      }
+      else if(b2.isSelected()){
+        type="Current Account";
+      }
+      else {
+        type = "Fixed Deposit ";
+      }
+      Random ran =new Random();
+      String card=""+Math.abs((ran.nextLong()%90000000L)+5152808900000000L);
+      String pin=""+Math.abs((ran.nextInt()%9000)+1000);
+      String services="";
+      if(c1.isSelected()){
+        services=services+"ATM";
+
+
+      }
+    else if(c2.isSelected()){
+      services=services+"Internet Banking";
+        System.out.println(services);
+
+    }
+      else if(c3.isSelected()){
+        services=services+"Cheque Book";
+
+      }
+      else if(c4.isSelected()){
+        services=services+"SMS Alerts";
+
+      }} else if (e.getSource()==cancel) {
+        try {
+
+        }
+        catch (Exception ae){
+
+        }
+
+
+      }
+
+
+  }
 }
