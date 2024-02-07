@@ -139,8 +139,10 @@ public class SignUp2 extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Invalid Income");
             } else if (e.getSource()==next){
                 Connect c = new Connect();
-                String insertVal = "insert into signUp2 values('" + formno + "','" + stinc + "','" + txt2 + "','" + txt3 + "','" + educ1 + "','" + existAcc + "','" + occupa + "')";
+                String insertVal = "insert into signUptwo values('" + formno + "','" + stinc + "','" + txt2 + "','" + txt3 + "','" + educ1 + "','" + existAcc + "','" + occupa + "')";
                 c.s.executeUpdate(insertVal);
+                setVisible(false);
+                new SignUp3(formno).setVisible(true);
             }
 
 

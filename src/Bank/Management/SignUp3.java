@@ -8,7 +8,9 @@ public class SignUp3 extends JFrame implements ActionListener{
     JRadioButton b1,b2,b3;
     JCheckBox c1,c2,c3,c4,c5;
     JButton submit,cancel;
-    SignUp3 (){
+    String formno;
+    SignUp3 (String formno){
+      this.formno=formno;
       setTitle("Page No: 3");
       setVisible(true);
       setSize(600,650);
@@ -87,24 +89,20 @@ public class SignUp3 extends JFrame implements ActionListener{
         cancel.setForeground(Color.WHITE);
         cancel.addActionListener(this);
         add(cancel);
-
-
-
-
-
-
     }
 
 
     public static void main(String[] args) {
-        new  SignUp3();
+        new  SignUp3("");
 
     }
 
   @Override
   public void actionPerformed(ActionEvent e) {
+    String type=null;
+    if(c5.isSelected()){
       if(e.getSource()==submit){
-      String type=null;
+
 
       if(b1.isSelected()){
         type="Savings Account";
@@ -134,18 +132,37 @@ public class SignUp3 extends JFrame implements ActionListener{
 
       }
       else if(c4.isSelected()){
-        services=services+"SMS Alerts";
-
-      }} else if (e.getSource()==cancel) {
-        try {
-
-        }
-        catch (Exception ae){
-
-        }
+        services=services+"SMS Alerts";}
 
 
-      }
+          try {
+            if(type.equals("")){
+              JOptionPane.showMessageDialog(null,"Account type is empty");
+            }
+
+
+
+            else{
+              Connect c=new Connect();
+              String insertval="insert into SignUp3 values('" + formno + "','" + type+ "','" + card + "','" + pin + "','"+services+"')";
+              String insertval2="insert into login values('" + formno + "','" + card + "','" + pin + "')";
+              c.s.executeUpdate(insertval);
+              c.s.executeUpdate(insertval2);
+              JOptionPane.showMessageDialog(null,"Note:"+"Card No:"+card+"\n" +"Pin:" +pin);
+            }
+
+          }
+          catch (Exception ae){
+            System.out.println(ae);
+
+          }
+
+
+
+      }}
+    else{
+      JOptionPane.showMessageDialog(null,"Please select Declaration");
+    }
 
 
   }
