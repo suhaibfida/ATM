@@ -2,6 +2,7 @@ package Bank.Management;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.ResultSet;
 
 public class Login extends JFrame implements ActionListener {
     JButton logIn,clear,signUp;
@@ -83,6 +84,27 @@ public class Login extends JFrame implements ActionListener {
         if(e.getSource()==clear){
             text1.setText("");
             text2.setText("");
+        }
+        else if(e.getSource()==logIn){
+            String cardno=text1.getText();
+            String pin=text2.getText();
+            Connect c=new Connect();
+            String query="Select * from login where Card='"+cardno+"' and Pin='"+pin+"'";
+            try {
+                ResultSet result=c.s.executeQuery(query);
+                if(result.next()){
+                    setVisible(false);
+                    new Transactions( pin).setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Incorrect Pin Or Password");
+                }
+
+            }
+            catch (Exception ce){
+                System.out.println(ce);
+            }
+
         }
         else if (e.getSource()==signUp) {
 
