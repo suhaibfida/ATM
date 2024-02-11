@@ -23,7 +23,6 @@ public class Transactions extends JFrame implements ActionListener{
         label2.setFont(new Font("sanserif",Font.BOLD,17));
         label2.setForeground(Color.WHITE);
         label.add(label2);
-        setVisible(true);
         b1 =new JButton("Cash Withdrawl");
         b1.setBounds(190,320,130,30);
         b1.setFont(new Font("SanSerif",Font.BOLD,15));
