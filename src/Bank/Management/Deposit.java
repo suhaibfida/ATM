@@ -2,10 +2,15 @@ package Bank.Management;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Deposit extends JFrame {
-    JButton b1;
-    Deposit(){
+public class Deposit extends JFrame implements ActionListener {
+    JButton b1,b2;
+    String pin;
+
+    Deposit(String pin){
+        this.pin=pin;
         setLayout(null);
         setTitle("Deposit");
         setSize(715,740);
@@ -17,21 +22,30 @@ public class Deposit extends JFrame {
         JLabel label=new JLabel(img);
         label.setBounds(0,0,700,700);
         add(label);
-        JLabel label2=new JLabel("Please Enter the Amount You Want To Dep.");
+        JLabel label2=new JLabel("Please Enter the Amount You Want To Deposit");
         label2.setBounds(175,240,430,40);
-        label2.setFont(new Font("sanserif",Font.BOLD,17));
+        label2.setFont(new Font("sanserif",Font.BOLD,15));
         label2.setForeground(Color.WHITE);
         label.add(label2);
         JTextField text=new JTextField();
-        text.setBounds(170,290,350,35);
+        text.setBounds(180,285,300,25);
         text.setFont(new Font("Raleway",Font.BOLD,18));
         label.add(text);
         b1 =new JButton("Deposit");
-        b1.setBounds(400,350,130,30);
+        b1.setBounds(400,330,100,30);
         b1.setFont(new Font("SanSerif",Font.BOLD,15));
-        b1.setBackground(Color.white);
-        b1.setForeground(Color.BLACK);
+        b1.setBackground(Color.blue);
+        b1.setForeground(Color.white);
+        b1.addActionListener(this);
         label.add(b1);
+         b2=new JButton("Back");
+         b2.setBounds(290,330,100,30);
+         b2.setFont(new Font("SanSerif",Font.BOLD,17));
+         b2.addActionListener(this);
+          b2.setBackground(Color.pink);
+           b2.setForeground(Color.BLACK);
+         label.add(b2);
+
 
 
 
@@ -43,7 +57,18 @@ public class Deposit extends JFrame {
 
 
     public static void main(String[] args) {
-        new Deposit();
+        new Deposit("");
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==b2){
+            setVisible(false);
+            new Transactions(pin).setVisible(true);
+
+
+        }
 
     }
 }
