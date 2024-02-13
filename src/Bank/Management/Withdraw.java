@@ -7,14 +7,13 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Date;
 
-public class Deposit extends JFrame implements ActionListener {
+public class Withdraw extends JFrame implements ActionListener {
     JButton b1,b2;
     String pin;
-
-    Deposit(String pin){
+    Withdraw(String pin){
         this.pin=pin;
         setLayout(null);
-        setTitle("Deposit");
+        setTitle("Withdraw");
         setSize(715,740);
         setLocation(400,20);
         setVisible(true);
@@ -24,7 +23,7 @@ public class Deposit extends JFrame implements ActionListener {
         JLabel label=new JLabel(img);
         label.setBounds(0,0,700,700);
         add(label);
-        JLabel label2=new JLabel("Please Enter the Amount You Want To Deposit");
+        JLabel label2=new JLabel("Please Enter the Amount You Want To Withdraw");
         label2.setBounds(175,240,430,40);
         label2.setFont(new Font("sanserif",Font.BOLD,15));
         label2.setForeground(Color.WHITE);
@@ -33,20 +32,20 @@ public class Deposit extends JFrame implements ActionListener {
         text.setBounds(180,285,300,25);
         text.setFont(new Font("Raleway",Font.BOLD,18));
         label.add(text);
-        b1 =new JButton("Deposit");
+        b1 =new JButton("Withdraw");
         b1.setBounds(400,330,100,30);
         b1.setFont(new Font("SanSerif",Font.BOLD,15));
         b1.setBackground(Color.blue);
         b1.setForeground(Color.white);
         b1.addActionListener(this);
         label.add(b1);
-         b2=new JButton("Back");
-         b2.setBounds(290,330,100,30);
-         b2.setFont(new Font("SanSerif",Font.BOLD,17));
-         b2.addActionListener(this);
-          b2.setBackground(Color.pink);
-           b2.setForeground(Color.BLACK);
-         label.add(b2);
+        b2=new JButton("Back");
+        b2.setBounds(290,330,100,30);
+        b2.setFont(new Font("SanSerif",Font.BOLD,17));
+        b2.addActionListener(this);
+        b2.setBackground(Color.pink);
+        b2.setForeground(Color.BLACK);
+        label.add(b2);
 
 
 
@@ -59,32 +58,32 @@ public class Deposit extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
-        new Deposit("");
+        new Withdraw("");
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==b1){
-           String st=b1.getText();
+            String st=b1.getText();
 
-           if(st.equals("")){
-               JOptionPane.showMessageDialog(null,"Please enter the amount");
+            if(st.equals("")){
+                JOptionPane.showMessageDialog(null,"Please enter the amount");
 
-           } else {
+            } else {
 
-               try {
-                   Connect c=new Connect();
-                   Date date=new Date();
-                   String query="Insert into Account values('"+pin+"','"+date+"','Deposit','"+st+"')";
-                   c.s.executeUpdate(query);
-                   JOptionPane.showMessageDialog(null,"Deposited Successfully.");
-               } catch (SQLException ex) {
-                   System.out.println(ex);
-               }
+                try {
+                    Connect c=new Connect();
+                    Date date=new Date();
+                    String query="Insert into Account values('"+pin+"','"+date+"','Withdraw','"+st+"')";
+                    c.s.executeUpdate(query);
+                    JOptionPane.showMessageDialog(null,"Withdrawl Completed Successfully.");
+                } catch (SQLException ex) {
+                    System.out.println(ex);
+                }
 
 
-           }
+            }
 
         }
 

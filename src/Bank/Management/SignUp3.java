@@ -100,7 +100,7 @@ public class SignUp3 extends JFrame implements ActionListener{
   @Override
   public void actionPerformed(ActionEvent e) {
     String type=null;
-    if(c5.isSelected()){
+
       if(e.getSource()==submit){
 
 
@@ -134,15 +134,11 @@ public class SignUp3 extends JFrame implements ActionListener{
       else if(c4.isSelected()){
         services=services+"SMS Alerts";}
 
-
           try {
             if(type.equals("")){
               JOptionPane.showMessageDialog(null,"Account type is empty");
             }
-
-
-
-            else{
+            else {
               Connect c=new Connect();
               String insertval="insert into SignUp3 values('" + formno + "','" + type+ "','" + card + "','" + pin + "','"+services+"')";
               String insertval2="insert into login values('" + formno + "','" + card + "','" + pin + "')";
@@ -150,20 +146,18 @@ public class SignUp3 extends JFrame implements ActionListener{
               c.s.executeUpdate(insertval2);
               JOptionPane.showMessageDialog(null,"Note:"+"Card No:"+card+"\n" +"Pin:" +pin);
             }
-
           }
           catch (Exception ae){
             System.out.println(ae);
 
           }
-
-
+      }
+      else  {
+        setVisible(false);
+        new Login().setVisible(true);
 
       }}
-    else{
-      JOptionPane.showMessageDialog(null,"Please select Declaration");
-    }
 
 
-  }
+
 }
