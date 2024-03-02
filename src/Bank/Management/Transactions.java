@@ -51,6 +51,7 @@ public class Transactions extends JFrame implements ActionListener{
         b5 =new JButton("Change Pin");
         b5.setBounds(190,400,130,30);
         b5.setFont(new Font("SanSerif",Font.BOLD,15));
+        b5.addActionListener(this);
         b5.setBackground(Color.blue);
         b5.setForeground(Color.white);
         label.add(b5);

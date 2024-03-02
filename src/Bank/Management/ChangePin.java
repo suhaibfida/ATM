@@ -88,8 +88,17 @@ public class ChangePin extends JFrame implements ActionListener {
 
 
                 }
-
+                Connect c=new Connect();
+                String query1 ="update signup set  Pincode='"+c2pin+"'where Pincode='"+pin+"'";
+                String query2 ="update login set Pin='"+c2pin+"'where Pin='"+pin+"'";
+                String query3="update signup3 set Pin='"+c2pin+"'where Pin='"+pin+"'";
+                c.s.executeUpdate(query1);
+                c.s.executeUpdate(query2);
+                c.s.executeUpdate(query3);
+                JOptionPane.showMessageDialog(null,"Changed Sucessfully");
             }
+
+            
 
 
 
