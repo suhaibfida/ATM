@@ -4,15 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class Balance extends JFrame implements ActionListener {
 
     JButton b1;
     String pin;
     Balance( String pin){
-        this.pin= this.pin;
+        this.pin= pin;
         setVisible(true);
-        setLocation(400,50);
+        setLocation(400,30);
         setSize(700,740);
         setLayout(null);
         ImageIcon img1=new ImageIcon(ClassLoader.getSystemResource("Icons/atm png.jpg"));
@@ -21,27 +22,32 @@ public class Balance extends JFrame implements ActionListener {
         JLabel label=new JLabel(img3);
         label.setBounds(0,0,700,700);
         add(label);
+        int balance=0;
+        Connect c=new Connect();
         try {
+            ResultSet rs=c.s.executeQuery("select * from account where pin='"+pin+"'");
+           while (rs.next()){
+               if(rs.getString("Type").equals("Deposit")){
+                   balance+=Integer.parseInt(rs.getString("Amount"));
 
 
+               }
+               else{
+                   balance-=Integer.parseInt(rs.getString("Amount"));
+               }
 
-            
+           }
 
         }
         catch (Exception e){
             System.out.println(e);
 
         }
-
-
-
-
-
-
-
-
-
-
+        JLabel lab=new JLabel("Your account balance is :Rs "+balance);
+        lab.setBounds(175,240,430,40);
+        lab.setFont(new Font("sanserif",Font.BOLD,15));
+        lab.setForeground(Color.WHITE);
+        label.add(lab);
 
         b1 =new JButton("Back");
         b1.setBounds(282,440,120,30);
@@ -50,24 +56,16 @@ public class Balance extends JFrame implements ActionListener {
         b1.addActionListener(this);
         b1.setForeground(Color.black);
         label.add(b1);
-
-
-
-
-
-
-
     }
-
-
-
-
     public static void main(String[] args) {
+
         new Balance("");
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        setVisible(false);
+        new Transactions(pin).setVisible(true);
 
     }
 }

@@ -18,7 +18,7 @@ public class Transactions extends JFrame implements ActionListener{
         JLabel label=new JLabel(img);
         label.setBounds(0,0,700,700);
         add(label);
-        JLabel label2=new JLabel("Please Select your transaction");
+        JLabel label2=new JLabel("Please Select your transaction type");
         label2.setBounds(228,240,450,40);
         label2.setFont(new Font("sanserif",Font.BOLD,17));
         label2.setForeground(Color.WHITE);
@@ -26,6 +26,7 @@ public class Transactions extends JFrame implements ActionListener{
         b1 =new JButton("Cash Withdrawl");
         b1.setBounds(190,320,130,30);
         b1.setFont(new Font("SanSerif",Font.BOLD,15));
+        b1.addActionListener(this);
         b1.setBackground(Color.blue);
         b1.setForeground(Color.white);
         label.add(b1);
@@ -45,6 +46,7 @@ public class Transactions extends JFrame implements ActionListener{
         b4 =new JButton("Bal. Enq.");
         b4.setBounds(370,360,130,30);
         b4.setFont(new Font("SanSerif",Font.BOLD,15));
+        b4.addActionListener(this);
         b4.setBackground(Color.blue);
         b4.setForeground(Color.white);
         label.add(b4);
@@ -82,8 +84,11 @@ public class Transactions extends JFrame implements ActionListener{
         if(e.getSource()==b7){
             System.exit(0);
 
-        }
-        else if(e.getSource()==b2){
+        } else if (e.getSource()==b1) {
+            setVisible(false);
+            new Withdraw(pin).setVisible(true);
+
+        } else if(e.getSource()==b2){
            setVisible(false);
             new Deposit(pin).setVisible(true);
         }
