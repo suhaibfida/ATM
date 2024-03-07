@@ -11,6 +11,7 @@ public class Balance extends JFrame implements ActionListener {
     JButton b1;
     String pin;
     Balance( String pin){
+        setTitle("Balance");
         this.pin= pin;
         setVisible(true);
         setLocation(400,30);
@@ -29,8 +30,6 @@ public class Balance extends JFrame implements ActionListener {
            while (rs.next()){
                if(rs.getString("Type").equals("Deposit")){
                    balance+=Integer.parseInt(rs.getString("Amount"));
-
-
                }
                else{
                    balance-=Integer.parseInt(rs.getString("Amount"));
@@ -43,7 +42,7 @@ public class Balance extends JFrame implements ActionListener {
             System.out.println(e);
 
         }
-        JLabel lab=new JLabel("Your account balance is :Rs "+balance);
+        JLabel lab=new JLabel("Your account balance is : Rs "+balance);
         lab.setBounds(175,240,430,40);
         lab.setFont(new Font("sanserif",Font.BOLD,15));
         lab.setForeground(Color.WHITE);

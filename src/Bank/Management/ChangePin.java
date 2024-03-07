@@ -11,6 +11,7 @@ public class ChangePin extends JFrame implements ActionListener {
     String pin;
 
     ChangePin(String pin){
+        setTitle("Change Pin");
         setVisible(true);
         setLocation(400,20);
         setSize(710,740);

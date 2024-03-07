@@ -18,8 +18,8 @@ public class Transactions extends JFrame implements ActionListener{
         JLabel label=new JLabel(img);
         label.setBounds(0,0,700,700);
         add(label);
-        JLabel label2=new JLabel("Please Select your transaction type");
-        label2.setBounds(228,240,450,40);
+        JLabel label2=new JLabel("Please Select your option");
+        label2.setBounds(200,240,450,40);
         label2.setFont(new Font("sanserif",Font.BOLD,17));
         label2.setForeground(Color.WHITE);
         label.add(label2);
@@ -40,6 +40,7 @@ public class Transactions extends JFrame implements ActionListener{
         b3 =new JButton("Mini State.");
         b3.setBounds(190,360,130,30);
         b3.setFont(new Font("SanSerif",Font.BOLD,15));
+        b3.addActionListener(this);
         b3.setBackground(Color.blue);
         b3.setForeground(Color.white);
         label.add(b3);
@@ -98,6 +99,11 @@ public class Transactions extends JFrame implements ActionListener{
         } else if (e.getSource()==b4) {
             setVisible(false);
             new Balance(pin).setVisible(true);
+
+        }
+        else if (e.getSource()==b3) {
+            setVisible(false);
+            new Ministat(pin).setVisible(true);
 
         }
 
