@@ -10,6 +10,7 @@ import java.util.Date;
 public class Withdraw extends JFrame implements ActionListener {
     JButton b1,b2;
     String pin;
+    JTextField text;
     Withdraw(String pin){
         this.pin=pin;
         setLayout(null);
@@ -28,7 +29,7 @@ public class Withdraw extends JFrame implements ActionListener {
         label2.setFont(new Font("sanserif",Font.BOLD,15));
         label2.setForeground(Color.WHITE);
         label.add(label2);
-        JTextField text=new JTextField();
+        text=new JTextField();
         text.setBounds(180,285,300,25);
         text.setFont(new Font("Raleway",Font.BOLD,18));
         label.add(text);
@@ -65,7 +66,7 @@ public class Withdraw extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==b1){
-            String st=b1.getText();
+            String st=text.getText();
 
             if(st.equals("")){
                 JOptionPane.showMessageDialog(null,"Please enter the amount");

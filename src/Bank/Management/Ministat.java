@@ -1,5 +1,6 @@
 package Bank.Management;
 import javax.swing.*;
+import javax.xml.transform.Result;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,15 +30,46 @@ public class Ministat extends JFrame implements ActionListener {
         bName.setBounds(126,65,130,30);
         add(bName);
 
-         label2=new JLabel();
-        label2.setBounds(170,100,30,30);
+        JLabel label2=new JLabel();
+        label2.setBounds(100,100,500,30);
         add(label2);
+        JLabel label3=new JLabel();
+        label3.setBounds(30,200,500,100);
+        add(label3);
+        JLabel bal=new JLabel();
+        bal.setBounds(30,300,500,30);
+        add(bal);
+
+
         try{
             Connect c=new Connect();
             ResultSet rs=c.s.executeQuery("select * from login where Pin='"+pin+"'" );
             while(rs.next()){
                 label2.setText("Card Number: "+rs.getString("Card").substring(0,4)+"xxxxxxxx"+rs.getString("Card").substring(12));
             }
+
+        }
+
+        catch (Exception e){
+            System.out.println(e);
+        }
+
+        try {
+            Connect c = new Connect();
+            ResultSet rs = c.s.executeQuery("select * from account where pin='" + pin + "'");
+            int balance = 0;
+            while (rs.next()) {
+                label3.setText(label3.getText()+"<html>" + rs.getString("Date") + " &nbsp; &nbsp; &nbsp; " + rs.getString("Type") + "&nbsp; &nbsp; &nbsp;  " + rs.getString("Amount") + " <br><br><html>");
+                if (rs.getString("Type").equals("Deposit")) {
+                    balance += Integer.parseInt(rs.getString("Amount"));
+                } else {
+                    balance -= Integer.parseInt(rs.getString("Amount"));
+                }
+                bal.setText("Your current balance : " + balance);
+
+            }
+
+
 
         }
         catch (Exception e){
