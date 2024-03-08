@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 public class Ministat extends JFrame implements ActionListener {
     String pin;
     JButton b1;
+    JLabel label2;
     Ministat(String pin){
         this.pin=pin;
         setTitle("Mini Statement");
@@ -27,9 +28,16 @@ public class Ministat extends JFrame implements ActionListener {
         bName.setFont(new Font("serif",Font.BOLD,14));
         bName.setBounds(126,65,130,30);
         add(bName);
+
+         label2=new JLabel();
+        label2.setBounds(170,100,30,30);
+        add(label2);
         try{
             Connect c=new Connect();
             ResultSet rs=c.s.executeQuery("select * from login where Pin='"+pin+"'" );
+            while(rs.next()){
+                label2.setText("Card Number: "+rs.getString("Card").substring(0,4)+"xxxxxxxx"+rs.getString("Card").substring(12));
+            }
 
         }
         catch (Exception e){
