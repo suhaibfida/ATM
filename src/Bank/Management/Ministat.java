@@ -37,8 +37,11 @@ public class Ministat extends JFrame implements ActionListener {
         label3.setBounds(30,200,500,100);
         add(label3);
         JLabel bal=new JLabel();
-        bal.setBounds(30,300,500,30);
+        bal.setBounds(30,350,500,30);
         add(bal);
+        JLabel label4=new JLabel("      Date"+"                                        Type"+"             Amount");
+        label4.setBounds(30,150,500,30);
+        add(label4);
 
 
         try{
@@ -59,27 +62,18 @@ public class Ministat extends JFrame implements ActionListener {
             ResultSet rs = c.s.executeQuery("select * from account where pin='" + pin + "'");
             int balance = 0;
             while (rs.next()) {
-                label3.setText(label3.getText()+"<html>" + rs.getString("Date") + " &nbsp; &nbsp; &nbsp; " + rs.getString("Type") + "&nbsp; &nbsp; &nbsp;  " + rs.getString("Amount") + " <br><br><html>");
+                label3.setText(label3.getText()+"<html>" + rs.getString("Date") + "&nbsp; &nbsp; &nbsp; &nbsp; " + rs.getString("Type") + "&nbsp; &nbsp; &nbsp;  " + rs.getString("Amount") + " <br><br><html>");
                 if (rs.getString("Type").equals("Deposit")) {
                     balance += Integer.parseInt(rs.getString("Amount"));
                 } else {
                     balance -= Integer.parseInt(rs.getString("Amount"));
                 }
                 bal.setText("Your current balance : " + balance);
-
             }
-
-
-
         }
         catch (Exception e){
             System.out.println(e);
         }
-
-
-
-
-
         b1=new JButton("Back");
         b1.setBounds(135,500,100,30);
         b1.setFont(new Font("SanSerif",Font.BOLD,17));
@@ -87,10 +81,6 @@ public class Ministat extends JFrame implements ActionListener {
         b1.setBackground(Color.pink);
         b1.setForeground(Color.BLACK);
         add(b1);
-
-
-
-
     }
 
     public static void main(String[] args) {

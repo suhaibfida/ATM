@@ -44,7 +44,7 @@ public class Balance extends JFrame implements ActionListener {
         }
         JLabel lab=new JLabel("Your account balance is : Rs "+balance);
         lab.setBounds(175,240,430,40);
-        lab.setFont(new Font("sanserif",Font.BOLD,15));
+        lab.setFont(new Font("sanserif",Font.BOLD,17));
         lab.setForeground(Color.WHITE);
         label.add(lab);
 

@@ -119,8 +119,6 @@ public class SignUp3 extends JFrame implements ActionListener{
       String services="";
       if(c1.isSelected()){
         services=services+"ATM";
-
-
       }
     else if(c2.isSelected()){
       services=services+"Internet Banking";

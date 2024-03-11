@@ -91,8 +91,6 @@ public class SignUp2 extends JFrame implements ActionListener {
         text4.setFont(new Font("SanSerif",Font.BOLD,13));
         add(text4);
 
-
-
         occu=new JLabel("Occupation:");
         occu.setFont(new Font("sanserif",Font.BOLD,20));
         occu.setBounds(70,380,450,40);
@@ -111,20 +109,12 @@ public class SignUp2 extends JFrame implements ActionListener {
         add(next);
 
         }
-
-
 //        ------------------------------------------------------------------------------------
 //        Buttons
-
-
-
-
     public static void main(String[] args) {
         new SignUp2("");
 
     }
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -144,8 +134,6 @@ public class SignUp2 extends JFrame implements ActionListener {
                 setVisible(false);
                 new SignUp3(formno).setVisible(true);
             }
-
-
         } catch (SQLException ex) {
             System.out.println(ex);;
         }

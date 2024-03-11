@@ -11,9 +11,9 @@ public class Login extends JFrame implements ActionListener {
     Login(){
         getContentPane().setBackground(Color.pink);
         setTitle("ATM");
-        setSize(780,620);
+        setSize(780,720);
         setVisible(true);
-        setLocation(350,150);
+        setLocation(350,30);
         setLayout(null);
         ImageIcon bankPng=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
         Image set=bankPng.getImage().getScaledInstance(70,70,Image.SCALE_DEFAULT);

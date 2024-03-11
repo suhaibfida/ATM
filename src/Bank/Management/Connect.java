@@ -12,11 +12,6 @@ public class Connect {
         catch (Exception e) {
             System.out.println(e);
         }
-
-
     }
-
-
-
 
 }

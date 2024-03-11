@@ -81,8 +81,7 @@ public class SignUp extends JFrame implements ActionListener{
 //       JCALENDAR site:"https://toedter.com/jcalendar/"-->unzip -->bin --> jcalendar  {Upload Jcalendar into library} (IMPORT JCalender through module settings)
          date=new JDateChooser();
         date.setBounds(250,288,250,25);
-        date.setFont(new Font("sanserif",Font.BOLD,10));
-        date.setForeground(Color.black);
+        date.setFont(new Font("sanserif",Font.BOLD,15));
         add(date);
         gender=new JLabel("Gender:");
         gender.setFont(new Font("sanserif",Font.BOLD,20));
@@ -222,8 +221,5 @@ public class SignUp extends JFrame implements ActionListener{
         catch (Exception f){
             System.out.println(f);
         }
-
-
-
     }
 }
