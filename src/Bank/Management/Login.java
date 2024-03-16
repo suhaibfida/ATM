@@ -42,7 +42,7 @@ public class Login extends JFrame implements ActionListener {
         text1.setFont(new Font("SanSerif",Font.BOLD,18));
         add(text1);
 //        Pin
-        JLabel pin=new JLabel("Pin No:");
+        JLabel pin=new JLabel(" Pin No:");
         pin.setBounds(100,275,400,40);
         pin.setFont(new Font("Raleway",Font.BOLD,30));
 

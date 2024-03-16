@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 public class Transactions extends JFrame implements ActionListener{
     String pin;
-    JButton b1,b2,b3,b4,b5,b6,b7;
+    JButton b1,b2,b3,b4,b5,b7;
     Transactions (String pin){
         this.pin=pin;
         setLayout(null);
@@ -52,18 +52,12 @@ public class Transactions extends JFrame implements ActionListener{
         b4.setForeground(Color.white);
         label.add(b4);
         b5 =new JButton("Change Pin");
-        b5.setBounds(190,390,130,30);
+        b5.setBounds(190,390,310,30);
         b5.setFont(new Font("SanSerif",Font.BOLD,13));
         b5.addActionListener(this);
         b5.setBackground(Color.blue);
         b5.setForeground(Color.white);
         label.add(b5);
-        b6 =new JButton("Currency Con.");
-        b6.setBounds(370,390,130,30);
-        b6.setFont(new Font("SanSerif",Font.BOLD,13));
-        b6.setBackground(Color.blue);
-        b6.setForeground(Color.white);
-        label.add(b6);
         b7 =new JButton("EXIT");
         b7.setBounds(282,440,130,30);
         b7.setFont(new Font("SanSerif",Font.BOLD,15));
