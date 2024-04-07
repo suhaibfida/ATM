@@ -1,4 +1,4 @@
-# 🏧ATM (Automated Teller Machine) (Complete)
+![image](https://github.com/SuhaibFida/ATM/assets/109733166/34867ae8-61e0-4401-af26-08ea5a45b41b)![image](https://github.com/SuhaibFida/ATM/assets/109733166/43d08b11-807a-45c5-a337-b87c47685394)# 🏧ATM (Automated Teller Machine) (Complete)
 
 <h3>🧑‍💼ATM Management System (Beginner Friendly).</h3>
 
@@ -22,10 +22,13 @@
 2) JCalendar [Library]:  "https://toedter.com/jcalendar/" --> Unzip -->bin --> Jcalendar --> IntelliJ IDEA --> Module settings-->Library-->Add.
 3) Jdbc [Library] (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/" --> platform independent
    {Unzip-->MySQL connector}.
+   
+     <h3>📷Images:</h3>
+     ![image](https://github.com/SuhaibFida/ATM/assets/109733166/06bd6600-fbb2-4f45-95c0-2ca5d6dda73a)
+     ![image](https://github.com/SuhaibFida/ATM/assets/109733166/ee4056d0-3906-49d9-9c6a-5b0f3ef300f3)
 
-   <h3>📷Images:</h3>
-   ![image](https://github.com/SuhaibFida/ATM/assets/109733166/06bd6600-fbb2-4f45-95c0-2ca5d6dda73a)
- ![Uploading image.png…]()
+
+
 
 
 
