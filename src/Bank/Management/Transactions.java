@@ -11,7 +11,6 @@ public class Transactions extends JFrame implements ActionListener{
         setTitle("Welcome");
         setSize(715,740);
         setLocation(400,20);
-        setVisible(true);
         ImageIcon atm=new ImageIcon(ClassLoader.getSystemResource("Icons/atm png.jpg"));
         Image set=atm.getImage().getScaledInstance(700,700,Image.SCALE_DEFAULT);
         ImageIcon img=new ImageIcon(set);
@@ -65,9 +64,7 @@ public class Transactions extends JFrame implements ActionListener{
         b7.addActionListener(this);
         b7.setForeground(Color.black);
         label.add(b7);
-
-
-
+        setVisible(true);
     }
 
     public static void main(String[] args) {
