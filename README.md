@@ -1,4 +1,4 @@
-![image](https://github.com/SuhaibFida/ATM/assets/109733166/34867ae8-61e0-4401-af26-08ea5a45b41b)![image](https://github.com/SuhaibFida/ATM/assets/109733166/43d08b11-807a-45c5-a337-b87c47685394)# 🏧ATM (Automated Teller Machine) (Complete)
+# 🏧ATM (Automated Teller Machine) (Complete)
 
 <h3>🧑‍💼ATM Management System (Beginner Friendly).</h3>
 
