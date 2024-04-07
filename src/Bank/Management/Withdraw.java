@@ -46,6 +46,7 @@ public class Withdraw extends JFrame implements ActionListener {
         b2.setBackground(Color.pink);
         b2.setForeground(Color.BLACK);
         label.add(b2);
+        setVisible(true);
     }
     public static void main(String[] args) {
         new Withdraw("");
@@ -76,7 +77,7 @@ public class Withdraw extends JFrame implements ActionListener {
         else if(e.getSource()==b2){
             setVisible(false);
             new Transactions(pin).setVisible(true);
-            setVisible(true);
+        
         }
 
     }
