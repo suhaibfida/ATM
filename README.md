@@ -23,9 +23,9 @@
 3) Jdbc [Library] (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/" --> platform independent
    {Unzip-->MySQL connector}.
 <h3>📷Images:-</h3>
-
+<h5>
 ![image](https://github.com/SuhaibFida/ATM/assets/109733166/06bd6600-fbb2-4f45-95c0-2ca5d6dda73a) 
-![image](https://github.com/SuhaibFida/ATM/assets/109733166/ee4056d0-3906-49d9-9c6a-5b0f3ef300f3)
+![image](https://github.com/SuhaibFida/ATM/assets/109733166/ee4056d0-3906-49d9-9c6a-5b0f3ef300f3)🔍Tool</h3>
 
 
 
