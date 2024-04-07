@@ -12,7 +12,6 @@ public class Login extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.pink);
         setTitle("ATM");
         setSize(780,720);
-        setVisible(true);
         setLocation(350,30);
         setLayout(null);
         ImageIcon bankPng=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
@@ -77,6 +76,7 @@ public class Login extends JFrame implements ActionListener {
         signUp.setBackground(Color.darkGray);
         signUp.setForeground(Color.WHITE);
         add(signUp);
+        setVisible(true);
     }
 
     @Override
