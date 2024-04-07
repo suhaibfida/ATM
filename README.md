@@ -22,3 +22,7 @@
 2) JCalendar [Library]:  "https://toedter.com/jcalendar/" --> Unzip -->bin --> Jcalendar --> IntelliJ IDEA --> Module settings-->Library-->Add.
 3) Jdbc [Library] (Connect SQL database to the Java file). Jdbc connector "https://dev.mysql.com/downloads/connector/j/" --> platform independent
    {Unzip-->MySQL connector}.
+   ![image](https://github.com/SuhaibFida/ATM/assets/109733166/06bd6600-fbb2-4f45-95c0-2ca5d6dda73a)
+   ![image](https://github.com/SuhaibFida/ATM/assets/109733166/277b6b71-7e0b-42d1-863d-37214e233471)
+
+
