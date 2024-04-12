@@ -18,7 +18,6 @@ public class Deposit extends JFrame implements ActionListener {
         setTitle("Deposit");
         setSize(715,740);
         setLocation(400,20);
-        setVisible(true);
         ImageIcon atm=new ImageIcon(ClassLoader.getSystemResource("Icons/atm png.jpg"));
         Image set=atm.getImage().getScaledInstance(700,700,Image.SCALE_DEFAULT);
         ImageIcon img=new ImageIcon(set);
@@ -45,9 +44,10 @@ public class Deposit extends JFrame implements ActionListener {
          b2.setBounds(290,330,100,30);
          b2.setFont(new Font("SanSerif",Font.BOLD,17));
          b2.addActionListener(this);
-          b2.setBackground(Color.pink);
-           b2.setForeground(Color.BLACK);
+         b2.setBackground(Color.pink);
+         b2.setForeground(Color.BLACK);
          label.add(b2);
+        setVisible(true);
     }
     public static void main(String[] args) {
         new Deposit("");
