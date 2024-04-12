@@ -16,7 +16,6 @@ public class Ministat extends JFrame implements ActionListener {
         setTitle("Mini Statement");
         setSize(400,600);
         setLocation(50,30);
-        setVisible(true);
         setLayout(null);
         ImageIcon img1=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
         Image set=img1.getImage().getScaledInstance(30,30,Image.SCALE_DEFAULT);
@@ -42,6 +41,7 @@ public class Ministat extends JFrame implements ActionListener {
         JLabel label4=new JLabel("      Date"+"                                        Type"+"             Amount");
         label4.setBounds(30,150,500,30);
         add(label4);
+        setVisible(true);
 
 
         try{
