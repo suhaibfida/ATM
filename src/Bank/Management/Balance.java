@@ -13,7 +13,6 @@ public class Balance extends JFrame implements ActionListener {
     Balance( String pin){
         setTitle("Balance");
         this.pin= pin;
-        setVisible(true);
         setLocation(400,30);
         setSize(700,740);
         setLayout(null);
@@ -55,6 +54,7 @@ public class Balance extends JFrame implements ActionListener {
         b1.addActionListener(this);
         b1.setForeground(Color.black);
         label.add(b1);
+        setVisible(true);
     }
     public static void main(String[] args) {
 
