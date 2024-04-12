@@ -21,7 +21,6 @@ public class SignUp2 extends JFrame implements ActionListener {
         setLayout(null);
         setTitle("Page No.2");
         setSize(720,770);
-        setVisible(true);
         setLocation(410,30);
 //        HEAD IMG
         ImageIcon img1=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
@@ -107,6 +106,7 @@ public class SignUp2 extends JFrame implements ActionListener {
         next.setForeground(Color.WHITE);
         next.addActionListener(this);
         add(next);
+        setVisible(true);
 
         }
 //        ------------------------------------------------------------------------------------
