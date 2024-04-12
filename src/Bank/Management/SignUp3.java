@@ -12,7 +12,6 @@ public class SignUp3 extends JFrame implements ActionListener{
     SignUp3 (String formno){
       this.formno=formno;
       setTitle("Page No: 3");
-      setVisible(true);
       setSize(600,650);
       setLayout(null);
       setLocation(450,80);
@@ -89,6 +88,7 @@ public class SignUp3 extends JFrame implements ActionListener{
         cancel.setForeground(Color.WHITE);
         cancel.addActionListener(this);
         add(cancel);
+        setVisible(true);
     }
 
 
