@@ -13,7 +13,6 @@ public class ChangePin extends JFrame implements ActionListener {
     ChangePin(String pin){
         this.pin=pin;
         setTitle("Change Pin");
-        setVisible(true);
         setLocation(400,20);
         setSize(710,740);
         setLayout(null);
@@ -56,6 +55,7 @@ public class ChangePin extends JFrame implements ActionListener {
         b2.setBackground(Color.blue);
         b2.setForeground(Color.white);
         label.add(b2);
+        setVisible(true);
     }
 
     public static void main(String[] args) {
