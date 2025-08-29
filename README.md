@@ -25,8 +25,8 @@
 <h3>📷Images:-</h3>
 
 #Images
-<img width="1033" height="735" alt="image" src="https://github.com/user-attachments/assets/4b4e661d-8e7f-44e0-b6fe-042d305bd66b" />
-<img width="463" height="342" alt="image" src="https://github.com/user-attachments/assets/90d93981-1af1-47e8-a92e-5d1004aa5258" />
+<img width="500" height="535" alt="image" src="https://github.com/user-attachments/assets/4b4e661d-8e7f-44e0-b6fe-042d305bd66b" />
+<img width="500" height="532" alt="image" src="https://github.com/user-attachments/assets/90d93981-1af1-47e8-a92e-5d1004aa5258" />
 
 
 
