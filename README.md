@@ -24,9 +24,11 @@
    {Unzip-->MySQL connector}.
 <h3>📷Images:-</h3>
 
-Image 1 (https://github.com/SuhaibFida/ATM/assets/109733166/06bd6600-fbb2-4f45-95c0-2ca5d6dda73a) 
+#Images
+<img width="1033" height="735" alt="image" src="https://github.com/user-attachments/assets/4b4e661d-8e7f-44e0-b6fe-042d305bd66b" />
+<img width="463" height="342" alt="image" src="https://github.com/user-attachments/assets/90d93981-1af1-47e8-a92e-5d1004aa5258" />
 
-Image 2 (https://github.com/SuhaibFida/ATM/assets/109733166/ee4056d0-3906-49d9-9c6a-5b0f3ef300f3)
+
 
 
 
